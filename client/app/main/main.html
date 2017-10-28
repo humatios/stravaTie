@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <section class="col-md-6">
+      <h4>Daily activities</h4>
+      <button ng-hide="$ctrl.isHidden" class="btn btn-primary"
+              type="button" ng-click="$ctrl.addStrava()">
+        Add Strava
+      </button>
+      <div ng-if="$ctrl.isHidden">
+        <h5>
+          Welcome {{$ctrl.stravaMe.firstname}} {{$ctrl.stravaMe.lastname}}
+          ({{$ctrl.stravaMe.email}})
+        </h5>
+        Your user in Strava is from
+        {{$ctrl.stravaMe.city}},
+        {{$ctrl.stravaMe.state}},
+        {{$ctrl.stravaMe.country}}.
+        <h5>Your register route is</h5>
+        <p>Name: {{$ctrl.stravaRoute.name}}</p>
+        <p>Description: {{$ctrl.stravaRoute.description}}</p>
+        <p>Distance: {{$ctrl.stravaRoute.distance / 1000 | number : 2}} Km</p>
+        <p>Estimate time: {{$ctrl.stravaRoute.estimated_moving_time / 60 }} minutes</p>
+      </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section class="col-md-3">
+      <h5>Stress test</h5>
+      <span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eligendi qui quos sunt? Amet, recusandae,
+        veniam? Adipisci alias, architecto, at delectus libero, modi quas quasi similique sit temporibus tenetur ut.
+      </span>
+    </section>
+  </div>
+</div>
